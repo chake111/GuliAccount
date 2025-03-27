@@ -9,7 +9,7 @@ public class ConfigLoader {
     private static final Properties PROPS = new Properties();
 
     static {
-        try (InputStream input = ConfigLoader.class.getClassLoader().getResourceAsStream(".idea/config.properties")) {
+        try (InputStream input = ConfigLoader.class.getClassLoader().getResourceAsStream("config.properties")) {
             if (input == null) {
                 throw new RuntimeException("配置文件 config.properties 未找到！");
             }
